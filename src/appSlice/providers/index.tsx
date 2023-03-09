@@ -1,4 +1,4 @@
-import { Inter, Poppins } from '@next/font/google'
+import { Inter, Poppins } from "next/font/google"
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 
