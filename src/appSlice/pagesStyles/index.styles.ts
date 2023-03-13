@@ -10,3 +10,9 @@ export const ContainerWithUpperBar = styled.div`
   flex-direction: column;
   width: 100%;
 `
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+`

@@ -2,9 +2,11 @@ import Head from 'next/head'
 
 import {
   ContainerWithUpperBar,
+  Content,
   IndexPageContainer,
 } from '@/appSlice/pagesStyles/index.styles'
 import BannerStreams from '@/widgets/BannerStreams/ui'
+import LiveChannels from '@/widgets/LiveChannels/ui'
 import Sidebar from '@/widgets/Sidebar/ui'
 import UpperBar from '@/widgets/UpperBar/ui'
 
@@ -22,6 +24,9 @@ const Home = () => {
         <ContainerWithUpperBar>
           <UpperBar />
           <BannerStreams />
+          <Content>
+            <LiveChannels />
+          </Content>
         </ContainerWithUpperBar>
       </IndexPageContainer>
     </>

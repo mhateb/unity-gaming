@@ -24,7 +24,9 @@ const BannerStreams = () => {
           <StreamOption variant="leagueoflegends" />
           <StreamOption variant="english" />
         </OptionsContainer>
-        <Button variant="static">Watch</Button>
+        <Button width="131px" variant="static">
+          Watch
+        </Button>
       </Content>
     </BannerStreamsContainer>
   )

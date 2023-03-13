@@ -5,6 +5,7 @@ export interface ButtonProps
   variant?: 'normal' | 'warning' | 'succesful' | 'static'
   disabled?: boolean
   className?: string
+  width?: string
 }
 
 const Button = (props: ButtonProps) => {

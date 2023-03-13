@@ -24,13 +24,11 @@ const getColorText = (theme: DefaultTheme, disabled?: boolean) => {
   return theme.colors.white.main
 }
 
-export const ButtonStyled = styled.button`
+export const ButtonStyled = styled.button<{ width?: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
-  padding-left: 63px;
-  padding-right: 63px;
+  width: ${(props) => props.width || 'fit-content'};
   height: 56px;
   border-radius: 16px;
   background-color: ${(props) => getBackgroundColor(props.theme, props)};

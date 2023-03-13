@@ -6,7 +6,11 @@ type LoginButtonProps = {
 
 const LoginButton = ({ text = 'Join Now' }: LoginButtonProps) => {
   //TODO логика для логина и тд
-  return <ButtonStyled variant="static">{text}</ButtonStyled>
+  return (
+    <ButtonStyled width="100%" variant="static">
+      {text}
+    </ButtonStyled>
+  )
 }
 
 export default LoginButton
