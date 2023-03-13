@@ -1,7 +1,11 @@
 import Head from 'next/head'
 
-import { IndexPageContainer } from '@/appSlice/pagesStyles/index.styles'
+import {
+  ContainerWithUpperBar,
+  IndexPageContainer,
+} from '@/appSlice/pagesStyles/index.styles'
 import Sidebar from '@/widgets/Sidebar/ui'
+import UpperBar from '@/widgets/UpperBar/ui'
 
 const Home = () => {
   return (
@@ -14,6 +18,9 @@ const Home = () => {
       </Head>
       <IndexPageContainer>
         <Sidebar />
+        <ContainerWithUpperBar>
+          <UpperBar />
+        </ContainerWithUpperBar>
       </IndexPageContainer>
     </>
   )

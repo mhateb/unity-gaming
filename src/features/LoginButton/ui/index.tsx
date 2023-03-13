@@ -4,7 +4,7 @@ type LoginButtonProps = {
   text?: string
 }
 
-const LoginButton = ({ text = 'Join Us' }: LoginButtonProps) => {
+const LoginButton = ({ text = 'Join Now' }: LoginButtonProps) => {
   //TODO логика для логина и тд
   return <ButtonStyled variant="static">{text}</ButtonStyled>
 }
