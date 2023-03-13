@@ -4,6 +4,7 @@ import {
   ContainerWithUpperBar,
   IndexPageContainer,
 } from '@/appSlice/pagesStyles/index.styles'
+import BannerStreams from '@/widgets/BannerStreams/ui'
 import Sidebar from '@/widgets/Sidebar/ui'
 import UpperBar from '@/widgets/UpperBar/ui'
 
@@ -20,6 +21,7 @@ const Home = () => {
         <Sidebar />
         <ContainerWithUpperBar>
           <UpperBar />
+          <BannerStreams />
         </ContainerWithUpperBar>
       </IndexPageContainer>
     </>

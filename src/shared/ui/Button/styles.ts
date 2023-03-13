@@ -28,7 +28,9 @@ export const ButtonStyled = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: fit-content;
+  padding-left: 63px;
+  padding-right: 63px;
   height: 56px;
   border-radius: 16px;
   background-color: ${(props) => getBackgroundColor(props.theme, props)};
