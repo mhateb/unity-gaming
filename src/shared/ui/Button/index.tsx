@@ -2,7 +2,7 @@ import { ButtonStyled, ButtonText } from './styles'
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'normal' | 'warning' | 'succesful'
+  variant?: 'normal' | 'warning' | 'succesful' | 'static'
   disabled?: boolean
   className?: string
 }

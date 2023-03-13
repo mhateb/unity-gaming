@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import Button from '@/shared/ui/Button'
-import Input from '@/shared/ui/Input'
+import { IndexPageContainer } from '@/appSlice/pagesStyles/index.styles'
+import Sidebar from '@/widgets/Sidebar/ui'
 
 const Home = () => {
   return (
@@ -12,16 +12,9 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{ display: 'flex', gap: '30px' }}>
-        <Button variant="normal">Normal</Button>
-        <Button disabled>Disabled</Button>
-        <Button variant="warning">Warning</Button>
-        <Button variant="succesful">Succesful</Button>
-      </div>
-      <div style={{ display: 'flex', gap: '30px', marginTop: '40px' }}>
-        <Input type="text" label="without value" placeholder="Full Name" />
-        <Input type="text" value="Dmitry Maslanov" label="with value" />
-      </div>
+      <IndexPageContainer>
+        <Sidebar />
+      </IndexPageContainer>
     </>
   )
 }

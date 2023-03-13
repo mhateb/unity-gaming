@@ -61,9 +61,9 @@ const variantsMap: VariantsType = {
 }
 
 type TypographyProps = {
-  variant: keyof VariantsType
+  variant?: keyof VariantsType
   className?: string
-  children: ReactNode
+  children?: ReactNode
 }
 
 const Typography = ({ variant, className, children }: TypographyProps) => {

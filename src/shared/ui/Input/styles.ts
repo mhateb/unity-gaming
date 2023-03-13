@@ -4,12 +4,13 @@ import Typography from '@/shared/ui/Typography'
 
 export const InputStyled = styled.input`
   width: 100%;
-  background-color: rgb(228, 228, 228, 0.5);
+  background-color: rgba(228, 228, 228, 0.1);
+  opacity: 0.5;
   color: white;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   border-radius: 8px;
   outline: none;
@@ -19,9 +20,13 @@ export const InputStyled = styled.input`
   align-items: center;
   padding-left: 23px;
   padding-right: 10px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  margin-top: 16px;
 
   &:focus {
     border: 2px solid ${(props) => props.theme.colors.primary.main};
+    background-color: #242731;
   }
 
   &::placeholder {

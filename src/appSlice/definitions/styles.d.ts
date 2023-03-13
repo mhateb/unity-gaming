@@ -57,6 +57,10 @@ declare module 'styled-components' {
         6: string
         7: string
       }
+      background: {
+        bg1: string
+        bg2: string
+      }
     }
     'styled-breakpoints': {
       breakpoints: {

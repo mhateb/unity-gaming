@@ -43,9 +43,13 @@ const colors = {
     },
   },
   text: {
-    active: '#FFFFFF',
+    active: '#11142D',
     light: '#808191',
     link: '#5F75EE',
+  },
+  background: {
+    bg1: '#1F2128',
+    bg2: '#242731',
   },
   others: {
     1: '#D1E5FF',
