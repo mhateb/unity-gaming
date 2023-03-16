@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import JoinUsSidebarBg from '@/resources/images/join-us-sidebar-bg.jpg'
+import JoinUsSidebarBg from '@/shared/images/join-us-sidebar-bg.jpg'
 import Typography from '@/shared/ui/Typography'
 
 export const JoinUsSidebarContainer = styled.div`

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import BannerMainImage from '@/resources/images/banner-main-image.png'
+import BannerMainImage from '@/shared/images/banner-main-image.png'
 import Typography from '@/shared/ui/Typography'
 
 export const BannerStreamsContainer = styled.div`

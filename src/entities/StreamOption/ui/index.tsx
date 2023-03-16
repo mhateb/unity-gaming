@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import LeagueOfLegendsIcon from '@/resources/images/league-of-legends-icon.png'
+import LeagueOfLegendsIcon from '@/shared/images/league-of-legends-icon.png'
 
 import {
   IconWrapper,

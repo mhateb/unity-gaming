@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
 import NotificationButton from '@/features/NotificationButton/ui'
-import AvatarProfileImage from '@/resources/images/upper-bar-profile.png'
 import DropdownDownArrowIcon from '@/shared/icons/dropdown-down-arrow'
 import SearchLoupIcon from '@/shared/icons/search-loup'
 import UpperBarAddVideoIcon from '@/shared/icons/upper-bar-add-video'
 import UpperBarChatIcon from '@/shared/icons/upper-bar-chat'
 import UpperBarDiscoveryIcon from '@/shared/icons/upper-bar-discovery'
+import AvatarProfileImage from '@/shared/images/upper-bar-profile.png'
 import IconButton from '@/shared/ui/IconButton'
 
 import {

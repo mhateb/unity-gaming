@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Typography from '../Typography'
+import Typography from '../../../shared/ui/Typography'
 
 export const StreamOptionContainer = styled.div`
   display: flex;

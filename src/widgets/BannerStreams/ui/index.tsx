@@ -1,5 +1,5 @@
+import StreamOption from '@/entities/StreamOption/ui'
 import Button from '@/shared/ui/Button'
-import StreamOption from '@/shared/ui/StreamOption'
 import Tag from '@/shared/ui/Tag'
 
 import {
