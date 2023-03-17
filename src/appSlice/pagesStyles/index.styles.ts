@@ -15,4 +15,5 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 64px;
+  max-width: 1184px;
 `

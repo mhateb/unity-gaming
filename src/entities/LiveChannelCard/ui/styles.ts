@@ -13,6 +13,7 @@ export const PreviewImageWrapper = styled.div`
   height: 170px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+  cursor: pointer;
 `
 
 export const DescriptionBlock = styled.div``
@@ -26,6 +27,7 @@ export const VideoDescription = styled.div`
 
 export const Title = styled(Typography)`
   margin-bottom: 16px;
+  cursor: pointer;
 `
 
 export const ChannelCounter = styled.div`

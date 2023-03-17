@@ -6,6 +6,7 @@ import {
   IndexPageContainer,
 } from '@/appSlice/pagesStyles/index.styles'
 import BannerStreams from '@/widgets/BannerStreams/ui'
+import FromChannelsYouFollow from '@/widgets/FromChannelsYouFollow/ui'
 import LiveChannels from '@/widgets/LiveChannels/ui'
 import Sidebar from '@/widgets/Sidebar/ui'
 import UpperBar from '@/widgets/UpperBar/ui'
@@ -26,6 +27,7 @@ const Home = () => {
           <BannerStreams />
           <Content>
             <LiveChannels />
+            <FromChannelsYouFollow />
           </Content>
         </ContainerWithUpperBar>
       </IndexPageContainer>

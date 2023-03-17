@@ -9,6 +9,7 @@ export const LiveChannelsContainer = styled.div`
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 
 export const Title = styled(Typography)`
@@ -21,5 +22,4 @@ export const ChannelsList = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 40px;
-  gap: 50px;
 `
