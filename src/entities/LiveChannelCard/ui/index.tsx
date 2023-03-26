@@ -1,7 +1,9 @@
 import Image, { StaticImageData } from 'next/image'
 
-import AuthorWidget from '@/entities/AuthorWidget/ui'
-import WatchingCounter from '@/entities/WatchingCounter/ui'
+import AuthorWidget from '@/entities/AuthorWidget'
+import WatchingCounter, {
+  WatchingCounterVariants,
+} from '@/entities/WatchingCounter'
 import { AuthorPreview } from '@/shared/types/author'
 import Tag from '@/shared/ui/Tag'
 
@@ -41,7 +43,10 @@ const LiveChannelCard = ({
         <Divider />
         <ChannelCounter>
           <Tag />
-          <WatchingCounter count={watchingCounter} />
+          <WatchingCounter
+            variant={WatchingCounterVariants.WATCHING}
+            count={watchingCounter}
+          />
         </ChannelCounter>
       </DescriptionBlock>
     </LiveChannelCardContainer>

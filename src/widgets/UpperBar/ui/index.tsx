@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import NotificationButton from '@/features/NotificationButton/ui'
+import NotificationButton from '@/features/NotificationButton'
 import DropdownDownArrowIcon from '@/shared/icons/dropdown-down-arrow'
 import SearchLoupIcon from '@/shared/icons/search-loup'
 import UpperBarAddVideoIcon from '@/shared/icons/upper-bar-add-video'

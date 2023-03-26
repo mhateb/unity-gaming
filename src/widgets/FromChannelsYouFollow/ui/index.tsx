@@ -1,5 +1,5 @@
-import FollowingChannelItem from '@/features/FollowingChannelItem/ui'
-import FollowListAddVideoButton from '@/features/FollowListAddVideoButton/ui'
+import FollowingChannelItem from '@/features/FollowingChannelItem'
+import FollowListAddVideoButton from '@/features/FollowListAddVideoButton'
 import AvatarImage1 from '@/shared/images/list-avatar-1.png'
 import AvatarImage2 from '@/shared/images/list-avatar-2.png'
 import AvatarImage3 from '@/shared/images/list-avatar-3.png'

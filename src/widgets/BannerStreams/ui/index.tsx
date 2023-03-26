@@ -1,4 +1,4 @@
-import StreamOption from '@/entities/StreamOption/ui'
+import StreamOption from '@/entities/StreamOption'
 import Button from '@/shared/ui/Button'
 import Tag from '@/shared/ui/Tag'
 

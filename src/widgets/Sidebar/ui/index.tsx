@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import JoinUsSidebar from '@/features/JoinUsSidebar/ui'
+import JoinUsSidebar from '@/features/JoinUsSidebar'
 import AddVideoMenuIcon from '@/shared/icons/add-video-menu'
 import ChatMenuIcon from '@/shared/icons/chat-menu'
 import FollowingMenuIcon from '@/shared/icons/following-menu'

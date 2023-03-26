@@ -75,11 +75,12 @@ const channels = [
   },
 ]
 
+// У recommended videos и live channels одинаковая структура надо убрать дублирование
 const LiveChannels = () => {
   return (
     <LiveChannelsContainer>
       <Header>
-        <Title variant="h5">Live channels</Title>
+        <Title variant="h5">Recommended Videos</Title>
         <Select />
       </Header>
       <ChannelsList>

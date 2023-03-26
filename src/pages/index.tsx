@@ -5,11 +5,13 @@ import {
   Content,
   IndexPageContainer,
 } from '@/appSlice/pagesStyles/index.styles'
-import BannerStreams from '@/widgets/BannerStreams/ui'
-import FromChannelsYouFollow from '@/widgets/FromChannelsYouFollow/ui'
-import LiveChannels from '@/widgets/LiveChannels/ui'
-import Sidebar from '@/widgets/Sidebar/ui'
-import UpperBar from '@/widgets/UpperBar/ui'
+import BannerStreams from '@/widgets/BannerStreams'
+import CategoriesWidget from '@/widgets/CategoriesWidget'
+import FromChannelsYouFollow from '@/widgets/FromChannelsYouFollow'
+import LiveChannels from '@/widgets/LiveChannels'
+import RecommendedVideos from '@/widgets/RecommendedVideos'
+import Sidebar from '@/widgets/Sidebar'
+import UpperBar from '@/widgets/UpperBar'
 
 const Home = () => {
   return (
@@ -28,6 +30,8 @@ const Home = () => {
           <Content>
             <LiveChannels />
             <FromChannelsYouFollow />
+            <CategoriesWidget />
+            <RecommendedVideos />
           </Content>
         </ContainerWithUpperBar>
       </IndexPageContainer>

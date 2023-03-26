@@ -1,14 +1,26 @@
 import { CounterText, Indicator, WatchingCounterContainer } from './styles'
 
-type WatchingCounterProps = {
-  count: number
+export enum WatchingCounterVariants {
+  WATCHING = 'watching',
+  VIEWERS = 'viewers',
 }
 
-const WatchingCounter = ({ count }: WatchingCounterProps) => {
+type WatchingCounterProps = {
+  count: number
+  variant: WatchingCounterVariants
+}
+
+const WatchingCounter = ({ count, variant }: WatchingCounterProps) => {
+  const getText = () => {
+    if (variant === WatchingCounterVariants.WATCHING)
+      return `${count}K watching`
+    if (variant === WatchingCounterVariants.VIEWERS) return `${count}K viewers`
+  }
+
   return (
     <WatchingCounterContainer>
-      <Indicator />
-      <CounterText variant="caption2">{`${count}K watching`}</CounterText>
+      <Indicator variant={variant} />
+      <CounterText variant="caption2">{getText()}</CounterText>
     </WatchingCounterContainer>
   )
 }

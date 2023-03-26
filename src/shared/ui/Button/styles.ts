@@ -6,7 +6,7 @@ import { ButtonProps } from './index'
 
 const getBackgroundColor = (theme: DefaultTheme, props: ButtonProps) => {
   if (props.disabled) return theme.colors.grey.main
-  if (props.variant === 'normal') return theme.colors.darkGrey.main
+  if (props.variant === 'normal') return 'rgba(228, 228, 228, 0.1)'
   if (props.variant === 'static') return theme.colors.primary.main
   if (props.variant === 'warning') return theme.colors.accent02.shades[1]
   if (props.variant === 'succesful') return theme.colors.others[6]

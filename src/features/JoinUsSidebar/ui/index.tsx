@@ -1,4 +1,4 @@
-import LoginButton from '@/features/LoginButton/ui'
+import LoginButton from '@/features/LoginButton'
 
 import { Description, JoinUsSidebarContainer, Title } from './styles'
 
