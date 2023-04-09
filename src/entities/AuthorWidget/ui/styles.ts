@@ -1,18 +1,30 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import Typography from '@/shared/ui/Typography'
+
+import { AuthorWidgetProps } from '.'
 
 export const AuthorWidgetContainer = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `
 
-export const AuthorAvatar = styled.div`
+export const AuthorAvatar = styled.div<{
+  variant?: AuthorWidgetProps['variant']
+}>`
   position: relative;
   width: 32px;
   height: 32px;
   border-radius: 100%;
   margin-right: 8px;
+
+  ${(props) =>
+    props.variant === 'trending' &&
+    css`
+      width: 56px;
+      height: 56px;
+    `}
 `
 
 export const UserInfo = styled.div`
@@ -33,4 +45,8 @@ export const UserCategory = styled(Typography)`
 export const UserNameContainer = styled.div`
   display: flex;
   align-items: center;
+`
+
+export const WatchingCounterWrapper = styled.div`
+  margin-top: 4px;
 `

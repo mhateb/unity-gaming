@@ -8,4 +8,5 @@ export type AuthorPreview = {
   category: Category
   avatarImg: StaticImageData
   isVerify: boolean
+  countViewers?: number
 }

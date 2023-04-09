@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import Link from 'next/link'
+import styled, { css } from 'styled-components'
 
 import Typography from '@/shared/ui/Typography'
 
@@ -47,7 +48,7 @@ export const Block = styled.div`
   }
 `
 
-export const FeedsLinkItem = styled.div`
+export const FeedsLinkItem = styled.div<{ active?: boolean }>`
   height: 56px;
   width: 216px;
   display: flex;
@@ -56,6 +57,16 @@ export const FeedsLinkItem = styled.div`
   padding-right: 20px;
   border-radius: 12px;
   cursor: pointer;
+
+  ${(props) =>
+    props.active &&
+    css`
+      background-color: ${(props) => props.theme.colors.primary.main};
+
+      & span {
+        color: white;
+      }
+    `}
 `
 
 export const FeedsLinkItemIconWrapper = styled.div``
@@ -67,6 +78,10 @@ export const FeedsLinkAddVideoIconWrapper = styled.div`
 export const FeedsLinkItemText = styled(Typography)`
   color: ${(props) => props.theme.colors.darkGrey.shades[1]};
   margin-left: 16px;
+`
+
+export const FeedLink = styled(Link)`
+  text-decoration: none;
 `
 
 FeedsLinkItemText.defaultProps = {

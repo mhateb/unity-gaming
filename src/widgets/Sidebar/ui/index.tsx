@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import JoinUsSidebar from '@/features/JoinUsSidebar'
 import AddVideoMenuIcon from '@/shared/icons/add-video-menu'
@@ -25,6 +27,7 @@ import {
   Block,
   BlockTitle,
   Divider,
+  FeedLink,
   FeedsLinkAddVideoIconWrapper,
   FeedsLinkItem,
   FeedsLinkItemIconWrapper,
@@ -90,6 +93,8 @@ const followingItems = [
 ]
 
 const Sidebar = () => {
+  const router = useRouter()
+
   return (
     <SidebarContainer>
       <LogoContainer>
@@ -99,39 +104,69 @@ const Sidebar = () => {
         <BlockTitle variant="caption2">New Feeds</BlockTitle>
         <Block>
           <List>
-            <FeedsLinkItem>
-              <FeedsLinkItemIconWrapper>
-                <MenuNewFeedIcon />
-              </FeedsLinkItemIconWrapper>
-              <FeedsLinkItemText variant="menu">New Feed</FeedsLinkItemText>
-            </FeedsLinkItem>
-            <FeedsLinkItem>
-              <FeedsLinkItemIconWrapper>
-                <TrendingMenuIcon />
-              </FeedsLinkItemIconWrapper>
-              <FeedsLinkItemText variant="menu">Trending</FeedsLinkItemText>
-            </FeedsLinkItem>
-            <FeedsLinkItem>
-              <FeedsLinkItemIconWrapper>
-                <FollowingMenuIcon />
-              </FeedsLinkItemIconWrapper>
-              <FeedsLinkItemText variant="menu">Following</FeedsLinkItemText>
-            </FeedsLinkItem>
-            <FeedsLinkItem>
-              <FeedsLinkItemIconWrapper>
-                <VideoMenuIcon />
-              </FeedsLinkItemIconWrapper>
-              <FeedsLinkItemText variant="menu">Your Videos</FeedsLinkItemText>
-              <FeedsLinkAddVideoIconWrapper>
-                <AddVideoMenuIcon />
-              </FeedsLinkAddVideoIconWrapper>
-            </FeedsLinkItem>
-            <FeedsLinkItem>
-              <FeedsLinkItemIconWrapper>
-                <PlaylistMenuIcon />
-              </FeedsLinkItemIconWrapper>
-              <FeedsLinkItemText variant="menu">Playlist</FeedsLinkItemText>
-            </FeedsLinkItem>
+            <FeedLink href="/">
+              <FeedsLinkItem active={router.pathname === '/'}>
+                <FeedsLinkItemIconWrapper>
+                  <MenuNewFeedIcon
+                    color={router.pathname === '/' ? 'white' : '#808191'}
+                  />
+                </FeedsLinkItemIconWrapper>
+                <FeedsLinkItemText variant="menu">New Feed</FeedsLinkItemText>
+              </FeedsLinkItem>
+            </FeedLink>
+            <FeedLink href="/trending">
+              <FeedsLinkItem active={router.pathname === '/trending'}>
+                <FeedsLinkItemIconWrapper>
+                  <TrendingMenuIcon
+                    color={
+                      router.pathname === '/trending' ? 'white' : '#808191'
+                    }
+                  />
+                </FeedsLinkItemIconWrapper>
+                <FeedsLinkItemText variant="menu">Trending</FeedsLinkItemText>
+              </FeedsLinkItem>
+            </FeedLink>
+            <FeedLink href="/following">
+              <FeedsLinkItem active={router.pathname === '/following'}>
+                <FeedsLinkItemIconWrapper>
+                  <FollowingMenuIcon
+                    color={
+                      router.pathname === '/following' ? 'white' : '#808191'
+                    }
+                  />
+                </FeedsLinkItemIconWrapper>
+                <FeedsLinkItemText variant="menu">Following</FeedsLinkItemText>
+              </FeedsLinkItem>
+            </FeedLink>
+            <FeedLink href="/videos">
+              <FeedsLinkItem>
+                <FeedsLinkItemIconWrapper>
+                  <VideoMenuIcon
+                    color={router.pathname === '/videos' ? 'white' : '#808191'}
+                  />
+                </FeedsLinkItemIconWrapper>
+                <FeedsLinkItemText variant="menu">
+                  Your Videos
+                </FeedsLinkItemText>
+                <FeedsLinkAddVideoIconWrapper>
+                  <AddVideoMenuIcon
+                    color={router.pathname === '/videos' ? 'white' : '#808191'}
+                  />
+                </FeedsLinkAddVideoIconWrapper>
+              </FeedsLinkItem>
+            </FeedLink>
+            <FeedLink href="/playlist">
+              <FeedsLinkItem>
+                <FeedsLinkItemIconWrapper>
+                  <PlaylistMenuIcon
+                    color={
+                      router.pathname === '/playlist' ? 'white' : '#808191'
+                    }
+                  />
+                </FeedsLinkItemIconWrapper>
+                <FeedsLinkItemText variant="menu">Playlist</FeedsLinkItemText>
+              </FeedsLinkItem>
+            </FeedLink>
           </List>
         </Block>
         <Divider />

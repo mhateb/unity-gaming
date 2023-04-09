@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const IndexPageContainer = styled.div`
+export const TrendingPageContainer = styled.div`
   background-color: ${(props) => props.theme.colors.background.bg1};
   display: flex;
 `
@@ -16,6 +16,4 @@ export const Content = styled.div`
   flex-direction: column;
   padding: 64px;
   max-width: 1184px;
-  margin-left: auto;
-  margin-right: auto;
 `

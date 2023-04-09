@@ -19,6 +19,10 @@ export const Indicator = styled.div<{ variant: WatchingCounterVariants }>`
       return props.theme.colors.secondary.main
     if (props.variant === WatchingCounterVariants.VIEWERS)
       return props.theme.colors.others[6]
+    if (props.variant === WatchingCounterVariants.LAST_ACTIVE)
+      return props.theme.colors.others[6]
+    if (props.variant === WatchingCounterVariants.AUTHOR_WATCHING)
+      return props.theme.colors.accent02.shades[2]
   }};
 `
 
