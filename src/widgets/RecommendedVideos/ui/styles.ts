@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import Typography from '@/shared/ui/Typography'
 
-export const LiveChannelsContainer = styled.div`
+export const RecommendedVideosContainer = styled.div`
   max-width: 1200px;
   padding-top: 52px;
 `

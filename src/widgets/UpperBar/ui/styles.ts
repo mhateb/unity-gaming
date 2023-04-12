@@ -9,6 +9,7 @@ export const UpperBarContainer = styled.div`
   padding-left: 64px;
   padding-right: 64px;
   width: 100%;
+  box-shadow: inset 0px -1px 0px rgba(228, 228, 228, 0.1);
 `
 
 export const DropdownContainer = styled.div`

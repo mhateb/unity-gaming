@@ -6,7 +6,12 @@ import LiveChannelPreview3 from '@/shared/images/live-channel-3.png'
 import LiveChannelPreview4 from '@/shared/images/live-channel-4.png'
 import Select from '@/shared/ui/Select'
 
-import { ChannelsList, Header, LiveChannelsContainer, Title } from './styles'
+import {
+  ChannelsList,
+  Header,
+  RecommendedVideosContainer,
+  Title,
+} from './styles'
 
 const channels = [
   {
@@ -75,12 +80,18 @@ const channels = [
   },
 ]
 
+type RecommendedVideosProps = {
+  title?: string
+}
+
 // У recommended videos и live channels одинаковая структура надо убрать дублирование
-const LiveChannels = () => {
+const RecommendedVideos = ({
+  title = 'Recommended Videos',
+}: RecommendedVideosProps) => {
   return (
-    <LiveChannelsContainer>
+    <RecommendedVideosContainer>
       <Header>
-        <Title variant="h5">Recommended Videos</Title>
+        <Title variant="h5">{title}</Title>
         <Select />
       </Header>
       <ChannelsList>
@@ -88,8 +99,8 @@ const LiveChannels = () => {
           <LiveChannelCard key={item.id} {...item} />
         ))}
       </ChannelsList>
-    </LiveChannelsContainer>
+    </RecommendedVideosContainer>
   )
 }
 
-export default LiveChannels
+export default RecommendedVideos

@@ -48,11 +48,17 @@ const smallCategories = [
   },
 ]
 
-const CategoriesWidget = () => {
+type CategoriesWidgetProps = {
+  title?: string
+}
+
+const CategoriesWidget = ({
+  title = 'Popular Categories',
+}: CategoriesWidgetProps) => {
   return (
     <CategoriesWidgetContainer>
       <Header>
-        <Title variant="h5">Popular Categories</Title>
+        <Title variant="h5">{title}</Title>
       </Header>
       <Content>
         <MainCategory {...mainCategory} />

@@ -6,3 +6,11 @@ export type TrendingGameType = {
   description: string
   imgPreview: StaticImageData
 }
+
+export type GameCardType = {
+  id: number
+  img: StaticImageData
+  title: string
+  category: string
+  countViewers: number
+}
