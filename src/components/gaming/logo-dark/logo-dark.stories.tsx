@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import { UnityLogoDark } from "./unity-logo-dark";
+import { LogoDark } from "./logo-dark";
 
 const meta = {
-  title: "Unity/UnityLogoDark",
-  component: UnityLogoDark,
+  title: "Gaming/LogoDark",
+  component: LogoDark,
   parameters: {
     layout: "centered",
   },
@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     href: { control: "text" },
   },
-} satisfies Meta<typeof UnityLogoDark>;
+} satisfies Meta<typeof LogoDark>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,7 +23,7 @@ export const Playground: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="rounded-lg bg-[#1c1c1c] px-8 py-6">
+      <div className="rounded-lg bg-gaming-surface px-8 py-6">
         <Story />
       </div>
     ),

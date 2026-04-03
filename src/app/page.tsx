@@ -1,16 +1,13 @@
-import { UnityButton, UnityLogoDark, UnityPrimaryButton } from "@/components/unity";
+import { ActionButton, LogoDark } from "@/components/gaming";
 
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col font-sans">
-      <section
-        className="flex flex-1 flex-col items-center justify-center gap-10 px-6 py-16"
-        style={{ backgroundColor: "#1c1c1c" }}
-      >
-        <UnityLogoDark href="/" />
+      <section className="flex flex-1 flex-col items-center justify-center gap-10 bg-gaming-surface px-6 py-16">
+        <LogoDark href="/" />
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <UnityPrimaryButton>Get Started</UnityPrimaryButton>
-          <UnityButton variant="white">Get Started</UnityButton>
+          <ActionButton variant="primary">Get Started</ActionButton>
+          <ActionButton variant="white">Get Started</ActionButton>
         </div>
       </section>
     </div>

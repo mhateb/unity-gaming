@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 
-import { unitySans } from "@/lib/unity-fonts";
+import { unityHeading, unitySans } from "@/lib/unity-fonts";
 
 import "./globals.css";
 
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${unitySans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${unitySans.variable} ${unityHeading.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

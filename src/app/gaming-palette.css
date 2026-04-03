@@ -1,0 +1,46 @@
+/* Figma StyleGuide 🌈 — Color Palette 1 (0:3812) + White opacities (0:3946) — node 0:3811 */
+
+@theme inline {
+  --color-gaming-surface: #1f2128;
+  --color-gaming-neutral-dark: #1b1d21;
+  --color-gaming-neutral-deactive: #808191;
+  --color-gaming-neutral-light: #f0f3f6;
+  --color-gaming-neutral-light-a10: rgb(240 243 246 / 0.1);
+
+  --color-gaming-primary: #6c5dd3;
+  --color-gaming-primary-tint: #cfc8ff;
+  --color-gaming-primary-a5: rgb(108 93 211 / 0.05);
+  --color-gaming-primary-a10: rgb(108 93 211 / 0.1);
+  --color-gaming-primary-a50: rgb(108 93 211 / 0.5);
+  --color-gaming-primary-a75: rgb(108 93 211 / 0.75);
+
+  --color-gaming-secondary: #0049c6;
+  --color-gaming-secondary-light: #3f8cff;
+  --color-gaming-secondary-pale: #a0d7e7;
+  --color-gaming-secondary-deep: #002685;
+
+  --color-gaming-accent-1: #ffa2c0;
+  --color-gaming-accent-1-tint: #ffb7f5;
+  --color-gaming-accent-1-tint-a50: rgb(255 183 245 / 0.5);
+
+  --color-gaming-accent-2: #ffce73;
+  --color-gaming-accent-2-mid: #ff9a7b;
+  --color-gaming-accent-2-hot: #ff754c;
+
+  --color-gaming-white: #ffffff;
+  --color-gaming-white-a5: rgb(255 255 255 / 0.05);
+  --color-gaming-white-a10: rgb(255 255 255 / 0.1);
+  --color-gaming-white-a20: rgb(255 255 255 / 0.2);
+  --color-gaming-white-a40: rgb(255 255 255 / 0.4);
+  --color-gaming-white-a60: rgb(255 255 255 / 0.6);
+  --color-gaming-white-a70: rgb(255 255 255 / 0.7);
+  --color-gaming-white-a80: rgb(255 255 255 / 0.8);
+
+  --color-gaming-on-white-hover: #e8e9ef;
+  --color-gaming-control-disabled-bg: #2f323a;
+  --color-gaming-control-disabled-fg: #6e7179;
+
+  /* Раньше unity-* — оставляем алиасы */
+  --color-unity-muted: var(--color-gaming-neutral-deactive);
+  --color-unity-bg-1: var(--color-gaming-surface);
+}

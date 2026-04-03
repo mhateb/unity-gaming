@@ -5,20 +5,20 @@ import { cn } from "@/lib/utils";
 
 /** Figma MCP assets — при необходимости замени на файлы в `/public` (URL истекают). */
 const GAME_MARK = "https://www.figma.com/api/mcp/asset/1e141129-f340-4728-ba57-a2628b3e4be8";
-const UNITY_WORDMARK = "https://www.figma.com/api/mcp/asset/a998928b-2cb6-46cb-a6b6-fea89c48479f";
+const WORDMARK = "https://www.figma.com/api/mcp/asset/a998928b-2cb6-46cb-a6b6-fea89c48479f";
 
-export type UnityLogoDarkProps = {
+export type LogoDarkProps = {
   className?: string;
   /** Ссылка; если не задана — логотип без `<a>` */
   href?: string;
 };
 
-/** Figma: `Logo/Unity./Dark` — 176×40 */
-export function UnityLogoDark({ className, href }: UnityLogoDarkProps) {
+/** Тёмный вариант логотипа — 176×40 */
+export function LogoDark({ className, href }: LogoDarkProps) {
   const content = (
     <span
       className={cn("relative inline-flex h-10 w-[176px] shrink-0 items-center", className)}
-      data-name="Logo/Unity./Dark"
+      data-name="Logo/Dark"
     >
       <Image
         src={GAME_MARK}
@@ -30,7 +30,7 @@ export function UnityLogoDark({ className, href }: UnityLogoDarkProps) {
       />
       <span className="relative ml-1 flex min-w-0 flex-1 items-center justify-center px-1">
         <Image
-          src={UNITY_WORDMARK}
+          src={WORDMARK}
           alt="Unity."
           width={120}
           height={24}

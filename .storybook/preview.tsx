@@ -2,18 +2,30 @@ import type { Preview } from "@storybook/nextjs-vite";
 import { Geist_Mono } from "next/font/google";
 
 import "../src/app/globals.css";
-import { unitySans } from "../src/lib/unity-fonts";
+import { unityHeading, unitySans } from "../src/lib/unity-fonts";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
+/** Порталы (Select, Menu) монтируются в `body`; переменные next/font должны быть на `:root`. */
+function registerRootFontVariables() {
+  if (typeof document === "undefined") return;
+  const root = document.documentElement;
+  for (const token of [unitySans.variable, unityHeading.variable, geistMono.variable]) {
+    for (const cls of token.split(/\s+/).filter(Boolean)) {
+      root.classList.add(cls);
+    }
+  }
+}
+registerRootFontVariables();
+
 const preview: Preview = {
   decorators: [
     (Story) => (
       <div
-        className={`${unitySans.variable} ${geistMono.variable} min-h-full antialiased`}
+        className={`${unitySans.variable} ${unityHeading.variable} ${geistMono.variable} min-h-full font-sans antialiased`}
       >
         <Story />
       </div>

@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import type { ComponentType } from "react";
 
-import { UnityButton } from "./unity-button";
+import { ActionButton } from "./action-button";
 
 const onDark = [
   (Story: ComponentType) => (
-    <div className="flex min-h-[200px] items-center justify-center bg-[#1f2128] p-8">
+    <div className="flex min-h-[200px] items-center justify-center bg-gaming-surface p-8">
       <Story />
     </div>
   ),
 ];
 
 const meta = {
-  title: "Unity/UnityButton",
-  component: UnityButton,
+  title: "Gaming/ActionButton",
+  component: ActionButton,
   parameters: { layout: "fullscreen" },
   tags: ["autodocs"],
   decorators: onDark,
@@ -30,7 +30,7 @@ const meta = {
     children: "Get Started",
     disabled: false,
   },
-} satisfies Meta<typeof UnityButton>;
+} satisfies Meta<typeof ActionButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -61,9 +61,9 @@ export const RowAllVariants: Story = {
   name: "Все варианты",
   render: () => (
     <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-      <UnityButton variant="primary">Primary</UnityButton>
-      <UnityButton variant="white">White</UnityButton>
-      <UnityButton variant="deactive">Deactive</UnityButton>
+      <ActionButton variant="primary">Primary</ActionButton>
+      <ActionButton variant="white">White</ActionButton>
+      <ActionButton variant="deactive">Deactive</ActionButton>
     </div>
   ),
 };

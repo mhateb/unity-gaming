@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import type { ComponentType } from "react";
 
-import { UnityText, type UnityTextVariant } from "./unity-text";
+import { Typography, type TypographyVariant } from "./typography";
 
-const variants: UnityTextVariant[] = [
+const variants: TypographyVariant[] = [
   "d1",
   "d2",
   "d3",
@@ -23,7 +23,7 @@ const variants: UnityTextVariant[] = [
   "buttonSmall",
 ];
 
-const labels: Record<UnityTextVariant, string> = {
+const labels: Record<TypographyVariant, string> = {
   d1: "d1",
   d2: "d2",
   d3: "d3",
@@ -45,15 +45,15 @@ const labels: Record<UnityTextVariant, string> = {
 
 const figmaDarkDecorator = [
   (Story: ComponentType) => (
-    <div className="min-h-[200px] bg-unity-bg-1 p-8 text-white">
+    <div className="min-h-[200px] bg-gaming-surface p-8 text-gaming-white">
       <Story />
     </div>
   ),
 ];
 
 const meta = {
-  title: "Unity/UnityText",
-  component: UnityText,
+  title: "Gaming/Typography",
+  component: Typography,
   parameters: {
     layout: "fullscreen",
   },
@@ -66,11 +66,11 @@ const meta = {
     children: { control: "text" },
   },
   args: {
-    variant: "h1" as UnityTextVariant,
+    variant: "h1" as TypographyVariant,
     children: "Заголовок",
   },
   decorators: figmaDarkDecorator,
-} satisfies Meta<typeof UnityText>;
+} satisfies Meta<typeof Typography>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -92,16 +92,18 @@ export const Caption1: Story = { args: { variant: "caption1", children: labels.c
 export const Caption2: Story = { args: { variant: "caption2", children: labels.caption2 } };
 export const Body: Story = { args: { variant: "body", children: labels.body } };
 export const BodySmall: Story = { args: { variant: "bodySmall", children: labels.bodySmall } };
-export const Button: Story = { args: { variant: "button", children: labels.button } };
-export const ButtonSmall: Story = { args: { variant: "buttonSmall", children: labels.buttonSmall } };
+export const ButtonLabel: Story = { args: { variant: "button", children: labels.button } };
+export const ButtonSmallLabel: Story = {
+  args: { variant: "buttonSmall", children: labels.buttonSmall },
+};
 
 export const AllVariants: Story = {
   render: () => (
     <div className="flex max-w-xl flex-col gap-6">
       {variants.map((v) => (
-        <UnityText key={v} variant={v}>
+        <Typography key={v} variant={v}>
           {labels[v]}
-        </UnityText>
+        </Typography>
       ))}
     </div>
   ),
@@ -109,10 +111,14 @@ export const AllVariants: Story = {
 
 export const OnLightBackground: Story = {
   name: "На светлом фоне",
-  args: { variant: "body", children: "Текст body на светлом фоне — цвет приглушённый." },
+  args: {
+    variant: "body",
+    children: "По умолчанию белый — на светлом фоне задайте className, например text-neutral-900.",
+    className: "text-neutral-900",
+  },
   decorators: [
     (Story) => (
-      <div className="min-h-[120px] bg-white p-8 text-foreground">
+      <div className="min-h-[120px] bg-white p-8">
         <Story />
       </div>
     ),
