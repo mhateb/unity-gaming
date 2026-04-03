@@ -7,9 +7,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-unity-body);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  /* Заголовки и весь UI — тот же Inter, что и у кнопок */
+  --font-heading: var(--font-unity-body);
+  --color-unity-muted: #808191;
+  --color-unity-bg-1: #1f2128;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -121,10 +124,16 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
   html {
     @apply font-sans;
+  }
+  body {
+    @apply bg-background font-sans text-foreground;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
   }
 }

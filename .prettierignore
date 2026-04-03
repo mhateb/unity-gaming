@@ -3,3 +3,6 @@ node_modules
 out
 build
 package-lock.json
+types/cache-life.d.ts
+types/routes.d.ts
+types/validator.ts
